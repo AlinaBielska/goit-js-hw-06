@@ -16,8 +16,11 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 const markup = images
-    .map(({ url, alt }) => {return `<li><img class = "images_flex" src = ${url} alt = ${alt}></li>` })
+    .map(({ url, alt }) => {return `<li><img src = ${url} alt = ${alt} width="300" height="200"></li>` })
     .join("");
 
 gallery.insertAdjacentHTML("afterbegin", markup);
 
+gallery.style.display = 'flex';
+gallery.style.justifyContent = 'space-around';
+gallery.style.listStyleType = "none";
