@@ -4,20 +4,21 @@ const buttonDestroy = document.querySelector('button[data-destroy]');
 const boxes = document.querySelector('#boxes');
 
 buttonCreate.addEventListener("click", createBoxes);
-buttonDestroy.addEventListener("click", destroyBoxes);
+// buttonDestroy.addEventListener("click", destroyBoxes);
 
+
+let boxAmount = '';
+let boxSize = 30;
 
 function createBoxes(amount) {
     for (let i = 0; i <= amount; i++) {
     let randomHexColor = getRandomHexColor();
-    let boxAmount = 0;
-    let boxSize = 30;
     const box = '<div></div>';
     box.style.backgroundColor = randomHexColor;
-    box.style.width = '30px';
-    box.style.height = '30px';
     boxAmount += box;
     boxSize += 10;
+    box.style.width = boxSize + "px";
+    box.style.height = boxSize + "px";
   }
   boxes.innerHTML = boxAmount;
 };
