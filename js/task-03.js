@@ -20,7 +20,3 @@ const markup = images
     .join("");
 
 gallery.insertAdjacentHTML("afterbegin", markup);
-
-gallery.style.display = 'flex';
-gallery.style.justifyContent = 'space-around';
-gallery.style.listStyleType = "none";
